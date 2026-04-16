@@ -57,6 +57,12 @@
   overflow: hidden;
 }
 
+.img-reflexo img {
+    width: 900px; /* Ou o tamanho que desejar */
+    height: auto;
+    max-width: 100%; /* Garante que ela não quebre em telas pequenas */
+}
+
 .img-reflexo::after{
   content: "";
   position: absolute;
@@ -72,6 +78,71 @@
   );
   transform: skewX(-25deg);
   animation: brilho 3s infinite;
+}
+
+/* Container da Imagem */
+.main-benefit_imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* A Imagem em si */
+.main-benefit_image {
+    width: 100%;
+    max-width: 700px; /* Tamanho ideal para não ficar gigante */
+    height: auto;
+    /* Efeito de flutuação suave (Opcional) */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.08));
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Animação para dar aquele ar de 'página moderna' */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Ajuste na lista da esquerda para combinar com o peso visual da imagem */
+#function ul li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Cards que ficam abaixo do texto no Sobre */
+.mini-card {
+    background: #fdfdfd;
+    padding: 60px;
+    border-radius: 8px;
+    border-left: 5px solid #c9a96e; /* Detalhe lateral em dourado */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mini-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+}
+
+.mini-card .card-icon {
+    font-size: 30px;
+    font-weight: 700;
+    color: #c9a96e;
+    margin-bottom: 5px;
+}
+
+.mini-card p {
+    font-size: 15px !important; /* Texto menor para não poluir */
+    font-weight: 600;
+    margin: 0 !important;
+    color: #444;
 }
 
 @keyframes brilho{
