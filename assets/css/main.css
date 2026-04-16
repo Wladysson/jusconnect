@@ -39,11 +39,6 @@
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
-.light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
-}
-
 .dark-background {
   --background-color: #2f3942;
   --default-color: #ffffff;
@@ -605,13 +600,14 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 18px rgba(101, 67, 33, 0.15);
 }
 
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #001a5a;
+  background-color: rgba(26, 26, 26, 0.384); /* Preto suave com leve transparência */
+  backdrop-filter: blur(10px); /* Efeito de vidro fosco */
 }
 
 /*--------------------------------------------------------------
