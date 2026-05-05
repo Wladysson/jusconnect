@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>JusConnect | Agilidade e Tecnologia em seus Processos</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <meta name="description" content="JusConnect is a scalable legal platform that streamlines client acquisition, automates workflows and provides real-time insights for legal operations.">
+  <meta name="keywords" content="Legal Tech SaaS, Workflow Automation, Legal Operations, Data Platform, Scalable Systems, GovTech, Law Automation">
 
   <!-- Favicons -->
   <link href="assets/img/balanca.png" rel="icon">
@@ -26,6 +26,73 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ETSQ7KFMHD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ETSQ7KFMHD');
+  </script>
+
+  <script>
+  window.addEventListener('scroll', function() {
+    let scrollTop = window.scrollY;
+    let windowHeight = window.innerHeight;
+    let documentHeight = document.body.offsetHeight;
+
+    if (scrollTop + windowHeight >= documentHeight - 10) {
+      gtag('event', 'scroll_bottom', {
+        event_category: 'engagement'
+      });
+    }
+  });
+  </script>
+
+  <script>
+  let startTime = Date.now();
+
+  window.addEventListener('beforeunload', function () {
+    let timeSpent = Math.round((Date.now() - startTime) / 1000);
+
+    gtag('event', 'time_on_page', {
+      event_category: 'engagement',
+      value: timeSpent
+    });
+  });
+  </script>
+
+  <script>
+    setTimeout(() => {
+      gtag('event', 'time_30s');
+    }, 30000);
+    </script>
+
+    <script>
+  let scrollMarks = [25, 50, 75, 100];
+  let triggered = {};
+
+  window.addEventListener('scroll', function () {
+    let scrollTop = window.scrollY;
+    let docHeight = document.body.offsetHeight - window.innerHeight;
+    let scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+    scrollMarks.forEach(mark => {
+      if (scrollPercent >= mark && !triggered[mark]) {
+        triggered[mark] = true;
+
+        gtag('event', 'scroll_depth', {
+          event_category: 'engagement',
+          event_label: mark + '%'
+        });
+      }
+    });
+  });
+  </script>
+
 
   <!-- =======================================================
   * Template Name: Regna
@@ -333,19 +400,30 @@
 
   <footer id="footer" class="footer dark-background">
     <div class="container">
-      <h3 class="sitename">Onde o Direito Encontra a Tecnologia</h3>
-      <div class="container">
-        <div class="copyright">
-          <span>Copyright</span> <strong class="px-1 sitename">Plataforma Juridica de Captação Etica </strong> <span>All Rights Reserved</span>
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
-        </div>
+
+      <div class="copyright">
+        <span>© 2026</span> 
+        <strong class="px-1 sitename">JusConnect</strong> 
+        <span>Todos os direitos reservados.</span>
       </div>
+
+      <div class="legal mt-3">
+
+        <p>
+          This site uses Google Analytics to analyze traffic and user behavior. 
+          Learn how Google uses data from sites: 
+          <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy</a>.
+        </p>
+
+        <p>
+          Nenhuma informação pessoal identificável é coletada sem o consentimento explícito do usuário. 
+          O tratamento de dados é realizado em conformidade com a legislação aplicável de proteção de dados 
+          e com as melhores práticas de segurança da informação.
+        </p>
+
+      </div>
+
+    </div>
     </div>
   </footer>
 
